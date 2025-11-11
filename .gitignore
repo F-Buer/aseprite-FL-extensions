@@ -1,0 +1,23 @@
+# Logs
+logs
+*.log
+
+*.local
+
+bin
+builds
+
+**/.git
+!/.git
+
+# Editor directories and files
+.aseprite-extension
+.history
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

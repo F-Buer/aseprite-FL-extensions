@@ -1,0 +1,73 @@
+{
+  "name": "aseprite-extensions",
+  "displayName": "FL-Extensions",
+  "version": "1.0.0",
+  "author": {
+    "name": "Buer",
+    "url": "https://gitee.com/solitaryshadow"
+  },
+  "contributors": [],
+  "publisher": "aseprite",
+  "license": "MIT",
+  "categories": [
+    "Themes",
+    "Languages",
+    "Scripts",
+    "Keys",
+    "Palettes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "id": "aseprite-theme-light",
+        "path": "./themes/default/light",
+        "variant": "Light"
+      },
+      {
+        "id": "aseprite-theme-dark",
+        "path": "./themes/default/dark",
+        "variant": "Dark"
+      }
+    ],
+    "languages": [
+      {
+        "id": "zh",
+        "path": "./lang/zh-CN.ini",
+        "displayName": "简体中文"
+      },
+      {
+        "id": "zh-TW",
+        "path": "./lang/zh-CN.ini",
+        "displayName": "繁体中文"
+      }
+    ],
+    "scripts": [
+      {
+        "path": "./main.lua"
+      },
+      {
+        "path": "./scripts/Export-Tags/export-tags.lua"
+      },
+      {
+        "path": "./scripts/Layer-Status/layer-status.lua"
+      },
+      {
+        "path": "./scripts/Frame-Record/src/main.lua"
+      },
+      {
+        "path": "./scripts/Parallax/parallax.lua"
+      }
+    ],
+    "keys": [
+      {
+        "id": "all-keys",
+        "path": "./keys/extension-keys.aseprite-keys"
+      },
+      {
+        "id": "placeholder-keys",
+        "path": "./keys/placeholder-keys.aseprite-keys"
+      }
+    ],
+    "palettes": []
+  }
+}
