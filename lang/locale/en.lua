@@ -11,4 +11,5 @@ return {
 
   confirm_apply = "Apply",
   confirm_close = "Close",
+  lang_kv_missing = "The key or value under the current language data is missing, please supplement or adjust it!"
 }

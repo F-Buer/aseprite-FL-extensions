@@ -4,9 +4,6 @@ logs
 
 *.local
 
-bin
-builds
-
 **/.git
 !/.git
 
@@ -17,7 +14,3 @@ builds
 !.vscode/extensions.json
 .idea
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln

@@ -10,4 +10,6 @@ return {
 
   confirm_apply = "应用",
   confirm_close = "关闭",
+
+  lang_kv_missing = "当前语言数据下的键或值缺失，请补充或调整！",
 }

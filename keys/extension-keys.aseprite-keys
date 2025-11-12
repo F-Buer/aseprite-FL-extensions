@@ -5,5 +5,10 @@
         <key command="excalith-export-tags" shortcut="Ctrl+Shift+E" />
         <key command="excalith-layer-status" shortcut="Ctrl+Shift+D" />
         <key command="parallax" shortcut="Ctrl+Shift+R" />
+        <!-- balamod start -->
+        <key command="balamod_extension_tools_templates" shortcut="Ctrl+Alt+T" />
+        <key command="balamod_extension_tools_blindify" shortcut="Ctrl+Alt+B" />
+        <key command="balamod_extension_tools_scaler" shortcut="Ctrl+Alt+S" />
+        <!-- balamod end -->
     </commands>
 </keyboard>

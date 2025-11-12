@@ -51,9 +51,17 @@ function I18n:init(locale_path)
 end
 
 function I18n:get(key, ...)
+  -- 由于后续调整成插件默认只加载一份翻译文件，所以当当前语言中访问了不存在的key则直接提示
   local text = self.translations[self.current_lang][key]
-      or (not self.translations.en and self.translations.en[key])
-      or key
+  if not text then
+    -- 这里随便调了个插件翻译实例中的翻译内容，lang_kv_missing合并自全局翻译
+    error(Frame_Record_I18n:get("lang_kv_missing"))
+    return key
+  end
+
+  -- local text = self.translations[self.current_lang][key]
+  --     or (not self.translations.en and self.translations.en[key])
+  --     or key
   return select("#", ...) > 0 and string.format(text, ...) or text
 end
 
