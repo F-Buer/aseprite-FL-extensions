@@ -52,6 +52,12 @@ function init(plugin)
         utils = dofile(Global_Config.SYS_EXTENSIONS_DIR("Balamod", "src", "helpers.lua"))
     };
 
+
+    plugin:newMenuGroup {
+        id = "balamod-list",
+        title = Balamod_I18n:get("plugin_group_title"),
+        group = "layer_merge",
+    }
     local function AddCommand(id, title, group, file, loc)
         plugin:newCommand {
             id = id,
@@ -63,9 +69,11 @@ function init(plugin)
         }
     end
 
-    AddCommand("Balamod_Extension_Templates", "Templates", "file_new", "TemplateWindow.lua", "Dialogs");
-    AddCommand("Balamod_Extension_Tools_Blindify", "Blindify", "file_new", "Blindify.lua", "src")
-    AddCommand("Balamod_Extension_Tools_Scaler", "1X to 2X scaler", "file_new", "1Xto2X.lua", "src")
+    AddCommand("Balamod_Extension_Templates", Balamod_I18n:get("plugin_name1"), "balamod-list", "TemplateWindow.lua",
+        "Dialogs");
+    AddCommand("Balamod_Extension_Tools_Blindify", Balamod_I18n:get("plugin_name2"), "balamod-list", "Blindify.lua",
+        "src")
+    AddCommand("Balamod_Extension_Tools_Scaler", Balamod_I18n:get("plugin_name3"), "balamod-list", "1Xto2X.lua", "src")
 end
 
 function exit(plugin)

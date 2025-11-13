@@ -18,7 +18,7 @@ if r.width == 34 and r.height == 34 then
             newImg:drawImage(origImg, { x, 0 })
             x = x + 34
         end
-        newImg:drawImage(Image { fromFile = file }, { 0, 0 }, 124)
+        -- newImg:drawImage(Image { fromFile = file }, { 0, 0 }, 124)
     end)
     cel.image = newImg
     app.refresh()

@@ -85,7 +85,7 @@ local utils = {
     -- end
     -----------------------------------
     create_confirm = function(str)
-        local confirm = Dialog("Confirm?")
+        local confirm = Dialog(Balamod_I18n:get("confirm_button_text") .. "?")
 
         confirm:label {
             id = "text",
@@ -94,7 +94,7 @@ local utils = {
 
         confirm:button {
             id = "cancel",
-            text = "Cancel",
+            text = Balamod_I18n:get("cancel_button_text"),
             onclick = function()
                 confirm:close()
             end
@@ -102,7 +102,7 @@ local utils = {
 
         confirm:button {
             id = "confirm",
-            text = "Confirm",
+            text = Balamod_I18n:get("confirm_button_text"),
             onclick = function()
                 confirm:close()
             end
@@ -116,19 +116,19 @@ local utils = {
 
 
     set_visible = function(dlg, show, targets)
-        for i,target in ipairs(targets) do
-            dlg:modify{id=target,visible=show};
+        for i, target in ipairs(targets) do
+            dlg:modify { id = target, visible = show };
         end
     end,
 
     get_indexed_filename = function(prefix)
         local idx = 1;
-        local tmpName = prefix.."-"..tostring(idx);
-        for i,sprite in ipairs(app.sprites) do
+        local tmpName = prefix .. "-" .. tostring(idx);
+        for i, sprite in ipairs(app.sprites) do
             local currSpriteName = app.fs.fileTitle(sprite.filename);
-            if(currSpriteName == tmpName) then
-                idx = idx+1;
-                tmpName = prefix.."-"..tostring(idx);
+            if (currSpriteName == tmpName) then
+                idx = idx + 1;
+                tmpName = prefix .. "-" .. tostring(idx);
             end
         end
 

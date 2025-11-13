@@ -29,7 +29,7 @@ local function Show()
             end
         end
         if (templateName == nil) then return end
-        pluginData.logger.Log(Balamod_I18n:get("tmp_TTL") .. " '" .. templateName .. "'");
+        pluginData.logger.Log("failed to locate template  '" .. templateName .. "'");
     end
 
     ----------------------------------------------------------------------------------------
@@ -37,7 +37,7 @@ local function Show()
     ----------------------------------------------------------------------------------------
     local function SaveTemplates()
         pluginData.prefs.templatesJson = pluginData.json.encode({ data = templates });
-        pluginData.logger.Log(Balamod_I18n:get("tmp_save_text"));
+        pluginData.logger.Log("Save Complete.");
     end
 
     ----------------------------------------------------------------------------------------
@@ -119,7 +119,7 @@ local function Show()
     local function UpdateTemplate(name, newData)
         local template = TryGetTemplate(name);
         if (template == nil) then
-            app.alert("Failed to update template: " .. name);
+            app.alert(Balamod_I18n:get("tmp_up_text") .. name);
         else
             template.width = newData.width;
             template.height = newData.height;
@@ -170,7 +170,7 @@ local function Show()
 
     dlg:radio {
         id = "radioPreset",
-        text = "From Preset",
+        text = Balamod_I18n:get("dlg_radio_text1"),
         selected = true,
         onclick = function()
             SetFileDisplayMode(false);
@@ -179,7 +179,7 @@ local function Show()
 
     dlg:radio {
         id = "radioFile",
-        text = "From File",
+        text = Balamod_I18n:get("dlg_radio_text2"),
         selected = false,
         onclick = function()
             SetFileDisplayMode(true);
@@ -200,9 +200,9 @@ local function Show()
 
     dlg:button {
         id = "resetButton",
-        text = "Reset To Defaults",
+        text = Balamod_I18n:get("dlg_btn_text1"),
         onclick = function()
-            if (pluginData.utils.create_confirm("Reset to default templates?")) == true then
+            if (pluginData.utils.create_confirm(Balamod_I18n:get("reset_hint"))) == true then
                 SetDefaultTemplates();
                 SaveTemplates();
                 Reset();
@@ -212,7 +212,7 @@ local function Show()
 
     dlg:button {
         id = "detailsButton",
-        text = "Edit",
+        text = Balamod_I18n:get("dlg_btn_text2"),
         onclick = function()
             -- Hand of the current template data to a details popup for editing.
             local selected = TryGetTemplate(dlg.data.templateDropdown);
@@ -240,11 +240,11 @@ local function Show()
 
     dlg:button {
         id = "createFromPresetButton",
-        text = "Create",
+        text = Balamod_I18n:get("dlg_btn_text3"),
         onclick = function()
             selected = TryGetTemplate(dlg.data.templateDropdown);
             if selected == nil then
-                app.alert("Failed to create template.");
+                app.alert(Balamod_I18n:get("tmp_create_text"));
             else
                 local original = Sprite { fromFile = selected.file };
                 local newSprite = Sprite(original);
@@ -268,7 +268,7 @@ local function Show()
     };
     dlg:button {
         id = "createFromFileButton",
-        text = "Create",
+        text = Balamod_I18n:get("dlg_btn_text3"),
         onclick = function()
             local original = Sprite { fromFile = dlg.data.file };
             local newSprite = Sprite(original);
