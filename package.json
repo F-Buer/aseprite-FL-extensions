@@ -59,6 +59,9 @@
       },
       {
         "path": "./scripts/Balamod/src/plugin.lua"
+      },
+      {
+        "path": "./scripts/Pixel-Stats/init.lua"
       }
     ],
     "keys": [
