@@ -52,6 +52,18 @@ local pixelAmt = box.width * box.height;
 
 local hsvData = {};
 local hsvColors = {
+  -- Pixel_Stats_I18n:get("color_red"),
+  -- Pixel_Stats_I18n:get("color_orange"),
+  -- Pixel_Stats_I18n:get("color_yellow"),
+  -- Pixel_Stats_I18n:get("color_yellow_green"),
+  -- Pixel_Stats_I18n:get("color_green"),
+  -- Pixel_Stats_I18n:get("color_green_cyan"),
+  -- Pixel_Stats_I18n:get("color_cyan"),
+  -- Pixel_Stats_I18n:get("color_blue_cyan"),
+  -- Pixel_Stats_I18n:get("color_blue"),
+  -- Pixel_Stats_I18n:get("color_blue_magenta"),
+  -- Pixel_Stats_I18n:get("color_magenta"),
+  -- Pixel_Stats_I18n:get("color_red_magenta"),
   "Red",
   "Orange",
   "Yellow",
@@ -175,13 +187,13 @@ local flattenLayers = false;
 local cancel = false;
 if (multiLayers) then
   local question = app.alert {
-    title = "[Pixel Stats v1.2]",
+    title = "[" .. Pixel_Stats_I18n:get("alert_title") .. "]",
     text = {
-      "Pixel Stats detected multiple layers in the document!", "",
-      "Do you want Pixel Stats to flatten the layers then anaylze the image as a whole",
-      "or do you want to anaylze the single layer that's currently selected?"
+      Pixel_Stats_I18n:get("alert_text1"), "",
+      Pixel_Stats_I18n:get("alert_text2"),
+      Pixel_Stats_I18n:get("alert_text3")
     },
-    buttons = { "Anaylze Entire Image", "Analyze Single Layer", "Cancel" }
+    buttons = { Pixel_Stats_I18n:get("alert_btn1"), Pixel_Stats_I18n:get("alert_btn2"), Pixel_Stats_I18n:get("alert_btn3") }
   }
   if (question == 1) then
     flattenLayers = true;
@@ -283,7 +295,6 @@ if (not cancel) then
     print("--==     " .. Pixel_Stats_I18n:get("e_title") .. "     ==--")
     print("====================\n")
     print(Pixel_Stats_I18n:get("e_text1"))
-    print(Pixel_Stats_I18n:get("e_text1"))
     print(Pixel_Stats_I18n:get("e_text2") .. " " .. maxColors .. " " .. Pixel_Stats_I18n:get("e_text3") .. "\n")
     print(Pixel_Stats_I18n:get("e_text4"))
     print(Pixel_Stats_I18n:ger("e_text5"))
@@ -292,7 +303,7 @@ if (not cancel) then
   else
     -- Grouped color stats
     if (showGroupedColors) then
-      print("--==" .. Pixel_Stats_I18n:ger("e_text7") .. "==--");
+      print("--==" .. Pixel_Stats_I18n:get("e_text7") .. "==--");
       for i = 1, #hsvColors do
         local key = hsvColors[i];
         local value = hsvData[i];
@@ -301,13 +312,13 @@ if (not cancel) then
           (round(((value / pixelAmt) * 100) * 1000) / 1000) .. "%)"
         );
       end
-      print("Black:" .. createSpacer("Black:", "Blue Magenta") ..
+      print(Pixel_Stats_I18n:get("color_black") .. createSpacer("Black:", "Blue Magenta") ..
         "  " .. justBlack .. "  (" .. (round(((justBlack / pixelAmt) * 100) * 1000) / 1000) .. "%)"
       );
-      print("White:" .. createSpacer("White:", "Blue Magenta") ..
+      print(Pixel_Stats_I18n:get("color_white") .. createSpacer("White:", "Blue Magenta") ..
         "  " .. justWhite .. "  (" .. (round(((justWhite / pixelAmt) * 100) * 1000) / 1000) .. "%)"
       );
-      print("Gray:" .. createSpacer("Gray:", "Blue Magenta") ..
+      print(Pixel_Stats_I18n:get("color_gray") .. createSpacer("Gray:", "Blue Magenta") ..
         "  " .. justGray .. "  (" .. (round(((justGray / pixelAmt) * 100) * 1000) / 1000) .. "%)"
       );
       print(" ");
@@ -320,7 +331,7 @@ if (not cancel) then
     end
 
     -- Color stats
-    print("--==Individual Color Statistics==--");
+    print("--==" .. Pixel_Stats_I18n:get("color_stats_title") .. "==--");
     for i = 1, #pixelStuff do
       local key = pixelStuff[i][1];
       local value = pixelStuff[i][2];
@@ -343,5 +354,6 @@ if (not cancel) then
 
   finalTime = os.clock() - execTime
   print(" ");
-  print("Took " .. (round(finalTime * 1000) / 1000) .. " seconds to calculate");
+  print(Pixel_Stats_I18n:get("took_text1") ..
+    " " .. (round(finalTime * 1000) / 1000) .. " " .. Pixel_Stats_I18n:get("took_text2"));
 end

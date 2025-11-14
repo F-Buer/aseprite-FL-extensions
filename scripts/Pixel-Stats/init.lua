@@ -1,5 +1,5 @@
-local Pixel_Stats_I18n = I18n.new()
-Pixel_Stats_I18n:init("scripts.Pixel_Stats.locale")
+Pixel_Stats_I18n = I18n.new()
+Pixel_Stats_I18n:init("scripts.Pixel-Stats.locale")
 function init(plugin)
   plugin:newCommand {
     id = "pixel-status",

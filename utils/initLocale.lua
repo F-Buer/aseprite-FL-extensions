@@ -55,7 +55,7 @@ function I18n:get(key, ...)
   local text = self.translations[self.current_lang][key]
   if not text then
     -- 这里随便调了个插件翻译实例中的翻译内容，lang_kv_missing合并自全局翻译
-    error(Frame_Record_I18n:get("lang_kv_missing"))
+    error(Frame_Record_I18n:get("lang_kv_missing", key))
     return key
   end
 

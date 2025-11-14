@@ -14,4 +14,33 @@ return {
   e_text6 = "in the pixel_stats.lua script.",
 
   e_text7 = "Grouped Color Statistics",
+
+  color_black = "Black:",
+  color_white = "White:",
+  color_gray = "Gray:",
+  color_red = "Red:",
+  color_orange = "Orange:",
+  color_yellow = "Yellow:",
+  color_yellow_green = "Yellow Green:",
+  color_green = "Green:",
+  color_green_cyan = "Green Cyan:",
+  color_cyan = "Cyan:",
+  color_blue_cyan = "Blue Cyan:",
+  color_blue = "Blue:",
+  color_blue_magenta = "Blue Magenta:",
+  color_magenta = "Magenta:",
+  color_red_magenta = "Red Magenta:",
+
+  color_stats_title = "Individual Color Statistics",
+
+  took_text1 = "Took",
+  took_text2 = "seconds to calculate",
+
+  alert_title = "Pixel Stats v1.2",
+  alert_text1 = "Pixel Stats detected multiple layers in the document!",
+  alert_text2 = "Do you want Pixel Stats to flatten the layers then anaylze the image as a whole",
+  alert_text3 = "or do you want to anaylze the single layer that's currently selected?",
+  alert_btn1 = "Anaylze Entire Image",
+  alert_btn2 = "Analyze Single Layer",
+  alert_btn3 = "Cancel",
 }

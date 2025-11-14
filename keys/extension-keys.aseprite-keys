@@ -10,5 +10,6 @@
         <key command="balamod_extension_tools_blindify" shortcut="Ctrl+Alt+B" />
         <key command="balamod_extension_tools_scaler" shortcut="Ctrl+Alt+S" />
         <!-- balamod end -->
+        <key command="pixel-status" shortcut="Ctrl+Shift+O" />
     </commands>
 </keyboard>
