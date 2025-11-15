@@ -11,5 +11,7 @@
         <key command="balamod_extension_tools_scaler" shortcut="Ctrl+Alt+S" />
         <!-- balamod end -->
         <key command="pixel-status" shortcut="Ctrl+Shift+O" />
+        <key command="extensions-manager" shortcut="Ctrl+Shift+P" />
+        
     </commands>
 </keyboard>

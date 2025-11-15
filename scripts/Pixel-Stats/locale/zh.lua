@@ -1,5 +1,5 @@
 return {
-  msg_title = "图像统计",
+  msg_title = "像素统计",
   selected_text1 = "选择大小：",
   selected_text2 = "图像大小：",
   total_text1 = "像素总量：",

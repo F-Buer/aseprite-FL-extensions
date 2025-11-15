@@ -122,7 +122,7 @@ end
 local keydown_event_listener = nil
 local is_open_listen = false
 local dlg = Dialog({
-  title = "Parallax",
+  title = Parallax_I18n:get("plugin_title"),
   onclose = function()
     is_open_listen = false
   end

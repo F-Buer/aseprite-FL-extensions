@@ -38,7 +38,7 @@ local function initMenu(plugin)
   plugin:newMenuGroup {
     id = "frame-record",
     title = Frame_Record_I18n:get("menu_title"),
-    group = "edit_undo",
+    group = "layer_merge",
   }
   -- 配置子菜单
   plugin:newCommand {
@@ -81,7 +81,7 @@ function init(plugin)
   focus_manager:init()
   -- 设置插件菜单栏分割线
   plugin:newMenuSeparator {
-    group = "edit_undo"
+    group = "layer_merge"
   }
   -- 配置顶级菜单组
   initMenu(plugin)

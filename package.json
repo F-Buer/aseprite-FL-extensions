@@ -4,9 +4,14 @@
   "version": "1.0.0",
   "author": {
     "name": "Buer",
-    "url": "https://gitee.com/solitaryshadow"
+    "url": "https://github.com/F-Buer"
   },
-  "contributors": [],
+  "contributors": [
+    {
+      "name": "Buer",
+      "url": "https://gitee.com/solitaryshadow"
+    }
+  ],
   "publisher": "aseprite",
   "license": "CC BY-NC-SA 4.0",
   "categories": [
@@ -27,6 +32,16 @@
         "id": "aseprite-theme-dark",
         "path": "./themes/default/dark",
         "variant": "Dark"
+      },
+      {
+        "id": "aseprite-theme-ff-light",
+        "path": "./themes/ff/light",
+        "variant": "FF-Light"
+      },
+      {
+        "id": "aseprite-theme-ff-dark",
+        "path": "./themes/ff/dark",
+        "variant": "FF-Dark"
       }
     ],
     "languages": [
@@ -37,30 +52,41 @@
       },
       {
         "id": "zh-TW",
-        "path": "./lang/zh-CN.ini",
+        "path": "./lang/zh-hant.ini",
         "displayName": "繁体中文"
       }
     ],
     "scripts": [
       {
+        "id": "main",
         "path": "./main.lua"
       },
       {
+        "id": "Extensions-Manager",
+        "path": "./scripts/Extensions-Manager/init.lua"
+      },
+      {
+        "id": "Export-Tags",
         "path": "./scripts/Export-Tags/export-tags.lua"
       },
       {
+        "id": "Layer-Status",
         "path": "./scripts/Layer-Status/layer-status.lua"
       },
       {
+        "id": "Frame-Record",
         "path": "./scripts/Frame-Record/src/main.lua"
       },
       {
+        "id": "Parallax",
         "path": "./scripts/Parallax/parallax.lua"
       },
       {
+        "id": "Balamod",
         "path": "./scripts/Balamod/src/plugin.lua"
       },
       {
+        "id": "Pixel-Stats",
         "path": "./scripts/Pixel-Stats/init.lua"
       }
     ],

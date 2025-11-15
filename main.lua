@@ -3,7 +3,8 @@
 I18n = require 'utils.initLocale'
 -- 加载全局配置文件
 Global_Config = require 'config.baseConfig'
-
+-- 加载全局辅助函数
+Utils = require 'utils.helpers'
 
 function exit()
 end
