@@ -1,7 +1,4 @@
 require 'scripts.Frame-Record.src.config'
-local F_debug = require 'utils.debug'
-F_debug       = init_debug()
-F_debug:setEnabled(true)
 
 --- Constructs an SpriteLapse object, responsible for managing (adding and removing frames) the time lapse of the passed source sprite.
 --- fails if the source sprite is another time lapse sprite managed by another SpriteLapse instance.
@@ -119,7 +116,6 @@ function SpriteLapse(source_sprite)
                   Frame_Record_I18n:get("panel_clean_tooltip02"),
                   Frame_Record_I18n:get("panel_clean_tooltip03"),
                 },
-                resizeable = false,
                 buttons = {
                   Frame_Record_I18n:get("confirm_button_text"),
                   Frame_Record_I18n:get("cancel_button_text"),
@@ -154,7 +150,7 @@ function SpriteLapse(source_sprite)
     cleanup = function(self, obj)
       SpriteJson.setProperty(self.source_sprite, 'object_id', nil)
       -- 在扩展卸载或禁用或重新导入时，该复制帧重新生成并保存后再退出时和aseprite底层资源释放存在冲突，该情况只在打开了使用该扩展的精灵图时进行扩展卸载禁用等操作时才触发，这边考虑了下还是决定将其定为debug时不执行该操作，用户日常使用时一般很少会触发该类情况，且即时闪退也会保存最后的记录帧。
-      if not F_debug.enabled then
+      if not Frame_Record_Debug:getEnabled() then
         self:__generateTimelapse():close()
       end
     end,

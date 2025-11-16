@@ -6,7 +6,7 @@ end
 local origImg = cel.image:clone()
 
 local r = app.sprite.bounds
-local file = Global_Config.SYS_EXTENSIONS_DIR("Balamod", "Images", "BlindShineOverlay.aseprite")
+-- local file = Global_Config.SYS_EXTENSIONS_DIR("Balamod", "Images", "BlindShineOverlay.aseprite")
 
 if r.width == 34 and r.height == 34 then
     r.width = r.width * 21

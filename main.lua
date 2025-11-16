@@ -5,6 +5,8 @@ I18n = require 'utils.initLocale'
 Global_Config = require 'config.baseConfig'
 -- 加载全局辅助函数
 Utils = require 'utils.helpers'
+-- 加载debug
+Debug = require 'utils.debug'
 
 function exit()
 end

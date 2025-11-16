@@ -1,10 +1,6 @@
 -- debug操作 start
-local F_debug = require 'utils.debug'
-F_debug = init_debug()
--- debug:setMode("all")
--- debug:setEnabled(true) -- 需要调试时或需要日志打印以及提示时请手动启用
--- debug:setLogDir(app.fs.normalizePath(
---   "G:\\hurricane\\design\\pixel_art\\Aseprite-extensions\\FL-Extensions\\scripts\\Frame-Record\\logs")) -- 调试时请直接填绝对路径，
+Frame_Record_Debug = Debug:new(true, "file",
+  "G:\\hurricane\\design\\pixel_art\\Aseprite-extensions\\FL-Extensions\\scripts\\Frame-Record\\logs")
 -- debug操作 end
 
 -- 初始化多语言配置

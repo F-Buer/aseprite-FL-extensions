@@ -2,6 +2,7 @@
   "name": "aseprite-extensions",
   "displayName": "FL-Extensions",
   "version": "1.0.0",
+  "copyright": "Copyright © [2025-至今] [Buer/非正常人类研究中心]. All rights reserved.",
   "author": {
     "name": "Buer",
     "url": "https://github.com/F-Buer"
@@ -9,6 +10,10 @@
   "contributors": [
     {
       "name": "Buer",
+      "url": "https://gitee.com/solitaryshadow"
+    },
+    {
+      "name": "Erle",
       "url": "https://gitee.com/solitaryshadow"
     }
   ],
