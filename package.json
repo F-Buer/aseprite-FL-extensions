@@ -11,14 +11,10 @@
     {
       "name": "Buer",
       "url": "https://gitee.com/solitaryshadow"
-    },
-    {
-      "name": "Erle",
-      "url": "https://gitee.com/solitaryshadow"
     }
   ],
   "publisher": "aseprite",
-  "license": "CC BY-NC-SA 4.0",
+  "license": "GPL-3.0",
   "categories": [
     "Themes",
     "Languages",

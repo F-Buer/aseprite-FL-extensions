@@ -8,12 +8,12 @@ function I18n.new()
     ["zh-CN"] = ".zh",
     zh = ".zh",
     ["zh-TW"] = ".zh-TW",
-    ru = ".ru",
-    ko = ".ko",
-    ja = ".ja",
-    de = ".de",
-    fr = ".fr",
-    es = ".es"
+    -- ru = ".ru",
+    -- ko = ".ko",
+    -- ja = ".ja",
+    -- de = ".de",
+    -- fr = ".fr",
+    -- es = ".es"
   }
   self.translations = { -- 语言文件存放的位置
     -- en = {}

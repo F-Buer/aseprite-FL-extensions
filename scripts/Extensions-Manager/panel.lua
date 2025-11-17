@@ -36,7 +36,10 @@ local function pluginCreate()
       local status_name = value.status and Extensions_Manager_I18n:get("plugin_enableds") or
           Extensions_Manager_I18n:get("plugin_disableds")
       -- 扩展名称/内容
-      Utils.labelCreate(dlg, value.id, "", plugin_keys_vilad(value.id, value.key_name) .. "(当前状态：" .. status_name .. ")")
+      Utils.labelCreate(dlg, value.id, "",
+        plugin_keys_vilad(value.id, value.key_name) ..
+        "(" .. Extensions_Manager_I18n:get("current_status_text") .. "" .. status_name .. ")"
+      )
 
       dlg:combobox {
         id = value.id,
@@ -100,7 +103,7 @@ dlg:button {
         Extensions_Manager_I18n:get("about_text1") .. datas.name,
         Extensions_Manager_I18n:get("about_text2") .. datas.displayName,
         Extensions_Manager_I18n:get("about_text3") .. datas.version,
-        Extensions_Manager_I18n:get("about_text4") .. datas.author.name,
+        Extensions_Manager_I18n:get("about_text4") .. datas.author.name .. " " .. datas.author.url,
         Extensions_Manager_I18n:get("about_text5") .. table.concat(names, " "),
         Extensions_Manager_I18n:get("about_text6") .. datas.license,
         Extensions_Manager_I18n:get("about_text7") .. datas.copyright,

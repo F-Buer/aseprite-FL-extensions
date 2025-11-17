@@ -1,3 +1,46 @@
 return {
+  msg_title = "像素統計",
+  selected_text1 = "選擇大小：",
+  selected_text2 = "圖像大小：",
+  total_text1 = "像素總量：",
+  total_text2 = "顏色總量：",
 
+  e_title = "錯誤",
+  e_text1 = "該圖像中的顏色數量超過了限制（建議1000種以內）",
+  e_text2 = "",
+  e_text3 = "因此指令碼停止，以確保Aseprite不會因此崩潰。",
+  e_text4 = "如果要將最大顏色量更改為分析（analyze）用數值，",
+  e_text5 = "可以在pixel_stats.lua指令碼中更改「maxColors」的值。",
+  e_text6 = "",
+
+  e_text7 = "顏色分組統計",
+
+  color_black = "黑色：",
+  color_white = "白色：",
+  color_gray = "灰色：",
+  color_red = "紅色：",
+  color_orange = "橘色：",
+  color_yellow = "黃色：",
+  color_yellow_green = "黃綠色：",
+  color_green = "綠色：",
+  color_green_cyan = "青綠色：",
+  color_cyan = "青色：",
+  color_blue_cyan = "青藍色：",
+  color_blue = "藍色：",
+  color_blue_magenta = "藍品紅/藍洋紅色：",
+  color_magenta = "品紅/洋紅色：",
+  color_red_magenta = "紅品紅/紅洋紅色：",
+
+  color_stats_title = "單獨顏色統計",
+
+  took_text1 = "統計用了",
+  took_text2 = "秒",
+
+  alert_title = "像素統計 v1.2",
+  alert_text1 = "在文件中偵測到多個圖層！",
+  alert_text2 = "您是希望像素統計資訊將圖層平展合併，然後將圖像做為一個整體進行分析，",
+  alert_text3 = "還是希望分析目前選定的單個圖層？",
+  alert_btn1 = "分析整個圖像",
+  alert_btn2 = "分析單個圖層",
+  alert_btn3 = "取消",
 }

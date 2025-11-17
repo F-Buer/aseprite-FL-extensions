@@ -12,5 +12,22 @@ return {
   confirm_apply = "Apply",
   confirm_close = "Close",
   lang_kv_missing =
-  "The key or value under the current language data is missing, please supplement or adjust it!The key value is %s."
+  "The key or value under the current language data is missing, please supplement or adjust it!The key value is %s.",
+
+
+  notice_text = "I am aware of this and no need for a reminder next time.",
+  statement = "Statement",
+  statement_text1 =
+  "This extension integrates functions such as various collected tools, plugins, ",
+  statement_text2 = "and fonts into a single framework for easy management and consolidation by the author.",
+  statement_text3 =
+  "It was open-sourced on platforms including GitHub and Gitee on November 18, 2025, ",
+  statement_text4 =
+  "following and licensed under %s. Free secondary development and non-commercial retransmission are permitted!",
+  statement_text5 =
+  "If you obtained the original package through a paid channel, this constitutes illegal infringement and unauthorized sale of the extension. ",
+  statement_text6 = "Please contact the author, who will pursue legal responsibility in accordance with the law.",
+  statement_text7 = "Current time: %s. Thank you for using it! ",
+  statement_text8 = "If you encounter any issues, please contact: %s"
+
 }

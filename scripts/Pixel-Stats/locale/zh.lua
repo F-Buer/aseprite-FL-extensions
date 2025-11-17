@@ -29,7 +29,7 @@ return {
   color_blue = "蓝色：",
   color_blue_magenta = "蓝品红/蓝洋红色：",
   color_magenta = "品红/洋红色：",
-  color_red_magenta = "红品/红阳色：",
+  color_red_magenta = "红品红/红洋红色：",
 
   color_stats_title = "单独颜色统计",
 
