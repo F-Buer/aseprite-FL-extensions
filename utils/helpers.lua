@@ -1,13 +1,42 @@
 return {
-  load_json = function(file_name)
+  -- 指定json读取数据返回，默认是userdata，可以指定全局的json数据传入json解析
+  ---@param jsonType number
+  load_json = function(file_name, jsonType)
     if not file_name then
       return nil
     end
     local json_file = io.open(file_name, 'r')
     local json_data = json_file and json_file:read("*all")
-    _ = json_file and json_file:close()
+    json_file:close()
+
+    -- aseprite返回的是userdata数据。
+    if jsonType == 1 and jsons ~= nil then
+      return jsons.decode(json_data)
+    end
     local status, result = pcall(json.decode, json_data)
     return (status and result) or nil
+  end,
+
+  ---保存json数据到指定的文件中
+  ---@param dir string json文件地址
+  ---@param jsondata string json字符串
+  ---@param mode string 读取模式
+  ---@return boolean
+  save_json = function(dir, jsondata, mode)
+    if not mode then mode = "w" end
+    local json_file = io.open(dir, mode)
+    if not json_file then
+      error("Err read file.")
+      return false
+    end
+    local json_res = json_file:write(jsondata)
+    if not json_res then
+      error("Data writing err.")
+      json_file:close()
+      return false
+    end
+    json_file:close()
+    return true
   end,
 
   -- 插件的版本检测

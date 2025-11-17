@@ -51,7 +51,7 @@
     ],
     "languages": [
       {
-        "id": "zh",
+        "id": "zh-CN",
         "path": "./lang/zh-CN.ini",
         "displayName": "简体中文"
       },
@@ -72,26 +72,32 @@
       },
       {
         "id": "Export-Tags",
+        "key_name": "panel_title",
         "path": "./scripts/Export-Tags/export-tags.lua"
       },
       {
         "id": "Layer-Status",
+        "key_name": "plugin_name",
         "path": "./scripts/Layer-Status/layer-status.lua"
       },
       {
         "id": "Frame-Record",
+        "key_name": "menu_title",
         "path": "./scripts/Frame-Record/src/main.lua"
       },
       {
         "id": "Parallax",
+        "key_name": "plugin_title",
         "path": "./scripts/Parallax/parallax.lua"
       },
       {
         "id": "Balamod",
+        "key_name": "plugin_group_title",
         "path": "./scripts/Balamod/src/plugin.lua"
       },
       {
         "id": "Pixel-Stats",
+        "key_name": "msg_title",
         "path": "./scripts/Pixel-Stats/init.lua"
       }
     ],

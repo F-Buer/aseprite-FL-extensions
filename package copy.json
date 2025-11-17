@@ -1,0 +1,110 @@
+{
+  "author": {
+    "name": "Buer",
+    "url": "https://github.com/F-Buer"
+  },
+  "categories": [
+    "Themes",
+    "Languages",
+    "Scripts",
+    "Keys",
+    "Palettes"
+  ],
+  "contributes": {
+    "keys": [
+      {
+        "id": "all-keys",
+        "path": "./keys/extension-keys.aseprite-keys"
+      },
+      {
+        "id": "placeholder-keys",
+        "path": "./keys/placeholder-keys.aseprite-keys"
+      }
+    ],
+    "languages": [
+      {
+        "displayName": "简体中文",
+        "id": "zh",
+        "path": "./lang/zh-CN.ini"
+      },
+      {
+        "displayName": "繁体中文",
+        "id": "zh-TW",
+        "path": "./lang/zh-hant.ini"
+      }
+    ],
+    "palettes": [],
+    "scripts": [
+      {
+        "_path": "./main.lua",
+        "id": "main"
+      },
+      {
+        "_path": "./scripts/Extensions-Manager/init.lua",
+        "id": "Extensions-Manager"
+      },
+      {
+        "id": "Export-Tags",
+        "path": "./scripts/Export-Tags/export-tags.lua"
+      },
+      {
+        "_path": "./scripts/Layer-Status/layer-status.lua",
+        "id": "Layer-Status"
+      },
+      {
+        "id": "Frame-Record",
+        "path": "./scripts/Frame-Record/src/main.lua"
+      },
+      {
+        "_path": "./scripts/Parallax/parallax.lua",
+        "id": "Parallax"
+      },
+      {
+        "id": "Balamod",
+        "path": "./scripts/Balamod/src/plugin.lua"
+      },
+      {
+        "_path": "./scripts/Pixel-Stats/init.lua",
+        "id": "Pixel-Stats"
+      }
+    ],
+    "themes": [
+      {
+        "id": "aseprite-theme-light",
+        "path": "./themes/default/light",
+        "variant": "Light"
+      },
+      {
+        "id": "aseprite-theme-dark",
+        "path": "./themes/default/dark",
+        "variant": "Dark"
+      },
+      {
+        "id": "aseprite-theme-ff-light",
+        "path": "./themes/ff/light",
+        "variant": "FF-Light"
+      },
+      {
+        "id": "aseprite-theme-ff-dark",
+        "path": "./themes/ff/dark",
+        "variant": "FF-Dark"
+      }
+    ]
+  },
+  "contributors": [
+    {
+      "name": "Buer",
+      "url": "https://gitee.com/solitaryshadow"
+    },
+    {
+      "name": "Erle",
+      "url": "https://gitee.com/solitaryshadow"
+    }
+  ],
+  "copyright": "Copyright © [2025-至今] [Buer/非正常人类研究中心]. All rights reserved.",
+  "displayName": "FL-Extensions",
+  "license": "CC BY-NC-SA 4.0",
+  "name": "aseprite-extensions",
+  "publisher": "aseprite",
+  "version": "1.0.0"
+}
