@@ -1,21 +1,24 @@
 --[[
   一个简单的打包脚本，用于减少在aseprite扩展的手动打包操作。
-  注意：排除文件只对一层目录有效，powershell在对文件排除等操作上比较繁琐，因为团队内自用且无更多的配置需求则使用该方案。
 ]]
+
+-- 引入扩展配置
+local json = require "./utils/json/json"
+local data, err = io.open("./package.json", "r")
+if not data then return print("文件读取失败！", err) end
+local json_data = data:read("*a")
+local jd = json.decode(json_data)
+data:close()
 
 -- 配置参数
 local config = {
-  source_path = ".\\*",                 -- 要打包的源目录（包含package.json的文件夹）
-  output_path = '.\\FL-buer-1.0.0.zip', -- 输出目录（nil则默认当前目录）
-  replace_name = "aseprite-extension",  -- 指定类型后缀
-  exclude_files = {                     -- 要排除掉的文件及文件夹
+  source_path = ".\\*",                                                 -- 要打包的源目录（包含package.json的文件夹）
+  output_path = '.\\' .. jd.displayName .. '-' .. jd.version .. '.zip', -- 输出目录（nil则默认当前目录）
+  replace_name = "aseprite-extension",                                  -- 指定类型后缀
+  exclude_files = {                                                     -- 要排除掉的文件及文件夹
     'pack-extension.lua', '.history', '.gitignore', '.git'
   },
 }
-
--- 引入扩展配置
--- local extension_config = require './package.json'
--- print(extension_config)
 
 -- 删除已经存在的包
 os.remove(string.gsub(config.output_path, '.zip$', '') .. '.' .. config.replace_name)

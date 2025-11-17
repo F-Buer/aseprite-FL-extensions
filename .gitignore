@@ -8,7 +8,7 @@ logs
 !/.git
 
 # Editor directories and files
-.aseprite-extension
+*.aseprite-extension
 .history
 .vscode/*
 !.vscode/extensions.json
