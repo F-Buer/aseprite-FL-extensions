@@ -6,13 +6,13 @@
         <author name="Nicolas Desilets" url="https://twitter.com/MapleGecko"/>
     </authors>
     <fonts>
-        <font name="zpix"
+        <font name="LXGW-ML-R"
             type="truetype"
 	        antialias="false"
-            file="./zpix.ttf">
+            file="../fonts/LXGWWenKaiMonoLite-Regular.ttf">
 		</font>
-        <font id="default" font="zpix" size="10"/>
-        <font id="mini" font="zpix" size="8"/>
+        <font id="default" font="LXGW-ML-R" size="10"/>
+        <font id="mini" font="LXGW-ML-R" size="8"/>
     </fonts>
     <dimensions>
         <dim id="scrollbar_size" value="12"/>

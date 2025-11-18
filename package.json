@@ -107,6 +107,31 @@
         "path": "./keys/placeholder-keys.aseprite-keys"
       }
     ],
-    "palettes": []
+    "palettes": [
+      {
+        "id": "Xia-ff",
+        "path": "./palettes/Xia.gpl"
+      },
+      {
+        "id": "Balatro_Tarot",
+        "path": "./scripts/Balamod/Palettes/Tarot.gpl"
+      },
+      {
+        "id": "Balatro_Planet",
+        "path": "./scripts/Balamod/Palettes/Planet.gpl"
+      },
+      {
+        "id": "Balatro_Seal",
+        "path": "./scripts/Balamod/Palettes/Seal.gpl"
+      },
+      {
+        "id": "Balatro_Spectral",
+        "path": "./scripts/Balamod/Palettes/Spectral.gpl"
+      },
+      {
+        "id": "Balatro_UI",
+        "path": "./scripts/Balamod/Palettes/UI.gpl"
+      }
+    ]
   }
 }

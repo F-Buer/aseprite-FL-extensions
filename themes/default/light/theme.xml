@@ -6,10 +6,10 @@
         <author name="Nicolas Desilets" url="https://twitter.com/MapleGecko" />
     </authors>
     <fonts>
-             <font name="Zfull-GB"
+        <font name="Zfull-GB"
             type="truetype"
-	    antialias="false"
-            file="./Zfull-GB.ttf">
+	        antialias="false"
+            file="../fonts/Zfull-GB.ttf">
 		</font>
         <font id="default" font="Zfull-GB" size="10"/>
         <font id="mini" font="Zfull-GB" size="10"/>
