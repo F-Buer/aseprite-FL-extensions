@@ -19,8 +19,10 @@ return {
   statement_text2 = "以利管理與彙整。",
   statement_text3 = "已於2025年11月18日開源至GitHub、Gitee等平台，",
   statement_text4 = "遵循並授權%s，允許自由二次開發及非商業二次轉發！",
-  statement_text5 = "若您係透過付費管道取得原安裝包，則屬於非法侵權販售本擴充功能之行為，",
-  statement_text6 = "請聯絡作者，作者將依法追究相關責任。",
-  statement_text7 = "目前時間：%s，感謝您的使用！",
-  statement_text8 = "如遇問題，請聯絡：%s"
+  statement_text5 = "",
+  statement_text6 = "",
+  statement_text7 = "若您係透過付費管道取得原安裝包，則屬於非法侵權販售本擴充功能之行為，",
+  statement_text8 = "請聯絡作者，作者將依法追究相關責任。",
+  statement_text9 = "目前時間：%s，感謝您的使用！",
+  statement_text10 = "如遇問題，請聯絡：%s"
 }

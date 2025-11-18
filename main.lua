@@ -20,15 +20,20 @@ function init()
     app.fs.userConfigPath, "extensions", Global_Config.EXTENSIONS_NAME, "package.json")
   local datas = Utils.load_json(JSON_DIR)
 
-  Utils.labelCreate(dlg, "st1", "", Main_I18n:get("statement_text1"))
-  Utils.labelCreate(dlg, "st2", "", Main_I18n:get("statement_text2"))
-  Utils.labelCreate(dlg, "st3", "", Main_I18n:get("statement_text3"))
-  Utils.labelCreate(dlg, "st4", "", Main_I18n:get("statement_text4", datas.license))
 
-  Utils.labelCreate(dlg, "st5", "", Main_I18n:get("statement_text5"))
-  Utils.labelCreate(dlg, "st6", "", Main_I18n:get("statement_text6"))
-  Utils.labelCreate(dlg, "st7", "", Main_I18n:get("statement_text7", os.date("%Y-%m-%d %H:%M:%S")))
-  Utils.labelCreate(dlg, "st8", "", Main_I18n:get("statement_text8", datas.author.url))
+  local values = {
+    [4] = datas.license,
+    [9] = os.date("%Y-%m-%d %H:%M:%S"),
+    [10] = datas.author.url
+  }
+  for i = 1, 10 do
+    local val = values[i] and values[i] or ""
+    local key_value = Main_I18n:get("statement_text" .. i, val)
+    if key_value ~= "" then
+      Utils.labelCreate(dlg, "st" .. i, "", key_value)
+    end
+  end
+
   if datas.no_notice == true then return end
   local is_confirm = false
   dlg:check {

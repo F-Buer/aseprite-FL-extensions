@@ -23,11 +23,13 @@ return {
   statement_text3 =
   "It was open-sourced on platforms including GitHub and Gitee on November 18, 2025, ",
   statement_text4 =
-  "following and licensed under %s. Free secondary development and non-commercial retransmission are permitted!",
-  statement_text5 =
-  "If you obtained the original package through a paid channel, this constitutes illegal infringement and unauthorized sale of the extension. ",
-  statement_text6 = "Please contact the author, who will pursue legal responsibility in accordance with the law.",
-  statement_text7 = "Current time: %s. Thank you for using it! ",
-  statement_text8 = "If you encounter any issues, please contact: %s"
+  "following and licensed under %s.",
+  statement_text5 = "Free secondary development and non-commercial retransmission are permitted!",
+  statement_text6 =
+  "If you obtained the original package through a paid channel, ",
+  statement_text7 = "this constitutes illegal infringement and unauthorized sale of the extension.",
+  statement_text8 = "Please contact the author, who will pursue legal responsibility in accordance with the law.",
+  statement_text9 = "Current time: %s. Thank you for using it! ",
+  statement_text10 = "If you encounter any issues, please contact: %s"
 
 }
