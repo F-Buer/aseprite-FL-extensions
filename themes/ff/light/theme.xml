@@ -10,8 +10,8 @@
 	        antialias="false"
             file="../fonts/LXGWWenKaiMonoLite-Regular.ttf">
 		</font>
-        <font id="default" font="LXGW-ML-M" size="10"/>
-        <font id="mini" font="LXGW-ML-M" size="8"/>
+        <font id="default" font="LXGW-ML-R" size="10"/>
+        <font id="mini" font="LXGW-ML-R" size="8"/>
     </fonts>
     <dimensions>
         <dim id="scrollbar_size" value="12"/>
